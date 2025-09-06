@@ -87,6 +87,6 @@ const DailyReportSchema = new Schema({
 
 
 DailyReportSchema.index({ "shops.location": "2dsphere" });
-DailyReportSchema.index({ user: 1, date: 1 });
+DailyReportSchema.index({ user: 1, date: 1 });   
 
 module.exports = mongoose.model("DailyReport", DailyReportSchema);

@@ -285,7 +285,7 @@ exports.stopReporting = async (req, res, next) => {
         }
 
         if (!req.file) {
-            return SendError(res, 400, "Meter photo is required to stop reporting.");
+            return SendError(res, 400, "Meter photo is required to stop reporting.");  
         }
 
         const meterPhoto = await uploadImageToS3(req.file, _id, "daily-report");
